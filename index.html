@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+    <link crossorigin='anonymous' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' rel='stylesheet'/>
+    <link href='https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.min.css' rel='stylesheet'/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link href='./assets/favicon.ico' rel='icon' sizes='32x32' type='image/png'/>
+    <link href='./assets/favicon.ico' rel='icon' sizes='96x96' type='image/png'/>
+    <link href='./assets/favicon.ico' rel='icon' sizes='180x180' type='image/png'/>
+    <link href='./assets/favicon.ico' rel='icon' sizes='192x192' type='image/png'/>
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="mask-icon" href="./assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Link preview for social -->
+    <meta property="og:title" content=">Gmail Alias Generator">
+    <meta property="og:description" content="Gmail Alias Generator: crea tutti gli indirizzi Gmail validi con Plus & Dot Tricks. Usa una sola email per organizzare, filtrare e tracciare le tue iscrizioni.">
+    <meta property="og:image" content="./assets/favicon-32x32.png">
+    <meta property="og:url" content="https://www.twinba.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://www.twinba.com">
+    <meta name="twitter:creator" content="@massybertolucci">
+    <meta name="twitter:title" content="Gmail Alias Generator">
+    <meta property="og:description" content="Gmail Alias Generator: crea tutti gli indirizzi Gmail validi con Plus & Dot Tricks. Usa una sola email per organizzare, filtrare e tracciare le tue iscrizioni.">
+    <meta property="og:image" content="./assets/favicon-32x32.png">
+    <meta property="twitter:image:alt" content="Gmail Alias Generator: crea tutti gli indirizzi Gmail validi con Plus & Dot Tricks. Usa una sola email per organizzare, filtrare e tracciare le tue iscrizioni.">
+    <meta name="twitter:domain" content="https://www.twinba.com">
+    <meta name="twitter:label1" content="Tempo di lettura stimato">
+    <meta name="twitter:data1" content="1 minutop">
+    <meta name="twitter:label2" content="Scritto da">
+    <meta name="twitter:data2" content="@massybertolucci">
+    <title>Gmail Alias Generator</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-xl">
+            <div class="navbar-brand d-flex align-items-center gap-2">
+                <img src="./assets/gmail-icon.png" alt="Gmail" width="24" height="24">
+                Gmail Alias Generator
+            </div>
+            
+            <!-- Theme Switcher -->
+            <div class="nav-item dropdown">
+                <label aria-label="Theme Switch" class="navbar-button navbar-dark theme-toggle" data-bs-toggle="dropdown" for="darkmode" type="button">
+                    <svg class="i i-sun theme-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+                    </svg>
+                </label>
+                <ul class="dropdown-menu i-xs dropdown-menu-end shadow-sm rounded" id="darkmode">
+                    <div aria-label="" class="dropdown-title">Dark Mode</div>
+                    <li>
+                        <button class="dropdown-item d-flex align-items-center gap-2 active" data-bs-theme-value="light" type="button">
+                            <svg class="i i-sun" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <path d="M12 1v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+                            </svg>
+                            <span>Light</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item d-flex align-items-center gap-2" data-bs-theme-value="dark" type="button">
+                            <svg class="i i-moon" viewBox="0 0 24 24">
+                                <path d="M21 14a9 9 0 1 1-9-11 7 7 0 0 0 9 11z"></path>
+                            </svg>
+                            <span>Dark</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item d-flex align-items-center gap-2" data-bs-theme-value="auto" type="button">
+                            <svg class="i i-devices" viewBox="0 0 24 24">
+                                <path d="M1 19h12m0-3H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3"></path>
+                                <rect height="10" rx="2" width="6" x="17" y="12"></rect>
+                            </svg>
+                            <span>System</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-xl">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+				<div class="text-desc"><span>Crea tutti gli indirizzi Gmail validi con Plus &amp; Dot Tricks.</span></br>
+				<span>Usa una sola email per organizzare, filtrare e tracciare le tue iscrizioni.</span></div>
+                <div class="text-center mb-4">
+                    <h1>Inserisci il tuo account Gmail</h1>
+                    <span>(Senza "@gmail.com")</span>
+                    <div class="info-text">
+                        <p>📧 <strong>Plus Tricks:</strong> Aggiunge alcune parole dopo il segno + per organizzare le tue email</p>
+                        <p>🔸 <strong>Dot Tricks:</strong> Usa i punti per creare tutte le variazioni possibili del tuo indirizzo</p>
+                    </div>
+                </div>
+
+                <!-- Plus Words Management Accordion -->
+                <div class="accordion mb-4" id="plusWordsAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="plusWordsHeading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#plusWordsCollapse" aria-expanded="false"
+                                    aria-controls="plusWordsCollapse"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Gestisci le parole personalizzate per i Plus Tricks">
+                                <i class="fas fa-plus me-2"></i>
+                                Parole da usare per i Plus Tricks
+                                <span class="badge bg-secondary ms-2" id="plusWordsCount">0</span>
+                            </button>
+                        </h2>
+                        <div id="plusWordsCollapse" class="accordion-collapse collapse"
+                             aria-labelledby="plusWordsHeading" data-bs-parent="#plusWordsAccordion">
+                            <div class="accordion-body">
+                                <div class="mb-3">
+                                    <label for="plusWordsTextarea" class="form-label d-flex align-items-center gap-2">
+                                        <i class="fas fa-edit"></i>
+                                        Modifica le parole per Plus Tricks
+                                        <small class="text-muted">(separate da virgole)</small>
+                                    </label>
+                                    <textarea class="form-control" id="plusWordsTextarea" rows="6"
+                                              placeholder="abbonamenti, amici, app, backup, banche..."
+                                              data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                              title="Inserisci le parole separate da virgole. Evita spazi extra e caratteri speciali."></textarea>
+                                    <div class="form-text d-flex justify-content-between align-items-center mt-2">
+                                        <div>
+                                            <span id="wordCounter">0 parole</span> •
+                                            <span id="charCounter">0 caratteri</span>
+                                        </div>
+                                        <div id="validationFeedback" class="text-success">
+                                            <i class="fas fa-check-circle"></i> Formato valido
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <button type="button" class="btn btn-primary" id="savePlusWords">
+                                        <i class="fas fa-save me-1"></i>
+                                        Salva modifiche
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" id="resetPlusWords">
+                                        <i class="fas fa-undo me-1"></i>
+                                        Ripristina default
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Group with fixed @gmail.com -->
+                <div class="input-group mb-3">
+                    <input class="form-control border-left-radius " id="email-input" placeholder="username" type="text">
+                    <span class="input-group-text border-right-radius">@gmail.com</span>
+                </div>
+
+                <p class="hidden text-center mb-3">
+                    <span class="badge bg-primary">
+                        <span id="result-length"></span> Risultati totali
+                    </span>
+                </p>
+
+                <!-- Results Container -->
+                <div class="results-box">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="list-group list-group-flush" id="results-list"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Section -->
+                <div class="section mt-4" id="export-section" style="display: none;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="save-as">Save File:</label>
+                                <select class="form-select" id="save-as">
+                                    <option value="text/plain">File di Testo (.txt)</option>
+                                    <option value="application/msword">Documento Word (.rtf)</option>
+                                    <option value="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">File Excel (.csv)</option>
+                                    <option value="application/pdf">Stampa il Documento in PDF (.pdf)</option>
+                                </select>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary" id="save-file-btn">Save As Text File</button>
+                                <button class="btn btn-secondary" id="copy-all-btn">Copy All</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class='footer relative i-s'>
+        <div class='footer-wrapper d-flex flex-between flex-column flex-sm-row row-gap-2 py-3 section container-xl' id='copyright'>
+            <div class='credit d-flex flex-center flex-wrap'>
+                <div class='copyright'>
+                    <svg class='i i-copyright' viewBox='0 0 24 24'>
+                        <circle cx='12' cy='12' r='9'></circle>
+                        <path d='M14.6 9a4 4 0 1 0 0 6'></path>
+                    </svg>
+                    <span id='getyear'></span>
+                    <a class='link:hover' href="https://twinba.com" rel="noopener noreferrer nofollow" target="_blank" property="cc:attributionName">Massimo Bertolucci di Twinba S.r.l.</a>
+                </div>
+            </div>
+            <div class='social d-flex flex-center gap-2'>
+                <a aria-label='facebook' class='social-link link:hover' href='https://www.facebook.com/TwinbaSrl/' rel='noopener noreferrer nofollow' target='_blank'>
+                    <svg class='i i-facebook' viewBox='0 0 24 24'>
+                        <path d='M17 14h-3v8h-4v-8H7v-4h3V7a5 5 0 0 1 5-5h3v4h-3q-1 0-1 1v3h4Z'></path>
+                    </svg>
+                </a>
+                <a aria-label='instagram' class='social-link link:hover' href='https://www.instagram.com/massimobertolucci/' rel='noopener noreferrer nofollow' target='_blank'>
+                    <svg class='i i-instagram' viewBox='0 0 24 24'>
+                        <circle cx='12' cy='12' r='4'></circle>
+                        <rect height='20' rx='5' width='20' x='2' y='2'></rect>
+                        <path d='M17.5 6.5h0'></path>
+                    </svg>
+                </a>
+                <a aria-label='twitter' class='social-link link:hover' href='https://x.com/massybertolucci/' rel='noopener noreferrer nofollow' target='_blank'>
+                    <svg class='i i-twitter' viewBox='0 0 24 24'>
+                        <path d='M12 7.5a4.5 4.5 0 0 1 8-3Q22 4 23 3q0 2-2 4A13 13 0 0 1 1 19q5 0 7-2-8-4-5-13 4 5 9 5Z'></path>
+                    </svg>
+                </a>
+                <a aria-label="GitHub" href="https://github.com/Twinba/" class="social-link link:hover" rel='noopener noreferrer nofollow' target='_blank'>
+                    <svg aria-hidden="true" class="i i-ghithub octicon octicon-mark-github" height="20" version="1.1" viewBox="0 0 16 16" width="20">
+                        <path fill-rule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
+                </a>				
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.28/dist/sweetalert2.all.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
