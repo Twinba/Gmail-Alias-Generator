@@ -1,6 +1,6 @@
 # Gmail Alias Generator
 
-![GitHub](https://img.shields.io/github/license/Twinba/Gmail-Alias-Generator)
+[![licenza MIT](https://img.shields.io/github/license/Twinba/Gmail-Alias-Generator)](https://img.shields.io/github/license/Twinba/Gmail-Alias-Generator)
 
 Benvenuti nel repository di **Gmail Alias Generator**!  
 Questo progetto permette di generare facilmente tutte le **varianti valide** del tuo indirizzo Gmail utilizzando i **tag con il segno più (plus tricks)** e i **trucchi del punto (dot tricks)**.  
@@ -93,6 +93,6 @@ Sentiti libero di aprire una **issue** o inviare una **pull request**.
 
 Questo progetto è rilasciato sotto **licenza MIT**.
 
-![GitHub](https://img.shields.io/github/license/Twinba/Gmail-Alias-Generator)
+[![licenza MIT](https://img.shields.io/github/license/Twinba/Gmail-Alias-Generator)](https://img.shields.io/github/license/Twinba/Gmail-Alias-Generator)
 
 ---
